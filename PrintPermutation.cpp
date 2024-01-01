@@ -20,6 +20,7 @@ void printPermutations(string str, string asf)
         string roq = leftPart + rightPart;
         cout << roq << endl;
         printPermutations(roq, asf + ch);
+        cout << roq << endl;
     }
 }
 
