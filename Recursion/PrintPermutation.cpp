@@ -12,15 +12,15 @@ void printPermutations(string str, string asf)
     for (int i = 0; i < str.length(); i++)
     {
         char ch = str[i];
-        cout << ch << " ";
+        // cout << ch << " ";
         string leftPart = str.substr(0, i);
-        cout << leftPart << endl;
+        // cout << leftPart << endl;
         string rightPart = str.substr(i + 1);
-        cout << rightPart << endl;
+        // cout << rightPart << endl;
         string roq = leftPart + rightPart;
-        cout << roq << endl;
+        // cout << roq << endl;
         printPermutations(roq, asf + ch);
-        cout << roq << endl;
+        // cout << roq << endl;
     }
 }
 
