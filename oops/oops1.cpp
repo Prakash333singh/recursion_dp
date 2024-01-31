@@ -6,7 +6,7 @@
 // independent and reuseble components
 // benefits
 // 1.code resusability
-// 2readability
+// 2.readability
 // 3.scalability- adding new feature often becomes easier as new modules can be added without distrubing existing ones
 // 4.testing
 // 5.ease of maintence when there is any bug or change is required ,so the developer can focus on specific module without
@@ -116,16 +116,16 @@ using namespace std;
 // aaxxbbbb  x-padding
 // padding is used by complier to optimize memory alignment and access speed
 // it involves adding extra bits to the memory layout of classes to ensure that each member is aligned
-// at a memory address that's multiple of its size
+// at a memory address that's multiple of its size.
 // this optimization is crucial for efficient memory usage and access speed
-// especially in performance-critical application
+// especially in performance-critical application.
 
 // Compilers often align data members to improve memory access speed. For example, on many architectures, accessing a 4-byte int may be more efficient if it starts at an address that is a multiple of 4. This is known as data alignment.
 // To align the int b properly, the compiler may insert padding after the char a. The amount of padding added depends on the compiler and the architecture.
 
 // class a
 // {
-//     char a; // 1byte
+//     char a; // 2byte
 //     int b;  // 4 byte
 // };
 

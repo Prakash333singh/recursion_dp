@@ -9,8 +9,6 @@
 
 // static member function for accessing static member variables
 // aur static usse he banana hai jo sbke liye common rahe
-// const homework
-
 // #include <bits\stdc++.h>
 // using namespace std;
 // class customer
@@ -89,7 +87,6 @@
 
 // for eg: if any user fill age -5 which does make any sense
 // so we can control this age variable with the help of functions
-
 // #include <bits\stdc++.h>
 // using namespace std;
 // class customer
@@ -126,5 +123,5 @@
 
 // abstraction
 // display only essential information & hiding the details
-// for eg we all are using instgram so when we send message to anyone we do dont know whole mechanism behind this message transfer user only need to pass its message to its friend so hiding all logic behind msg traversal this property is clled abstraction
+// for eg we all are using instgram so when we send message to anyone we do dont know whole mechanism behind this message transfer user only need to pass its message to its friend so hiding all logic behind msg traversal this property is called abstraction
 // sort function in cpp sort(a.begin(),a.end())
