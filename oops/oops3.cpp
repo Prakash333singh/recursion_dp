@@ -9,8 +9,8 @@
 
 // static member function for accessing static member variables
 // aur static usse he banana hai jo sbke liye common rahe
-// #include <bits\stdc++.h>
-// using namespace std;
+#include <bits\stdc++.h>
+using namespace std;
 // class customer
 // {
 //     string name;
@@ -125,3 +125,82 @@
 // display only essential information & hiding the details
 // for eg we all are using instgram so when we send message to anyone we do dont know whole mechanism behind this message transfer user only need to pass its message to its friend so hiding all logic behind msg traversal this property is called abstraction
 // sort function in cpp sort(a.begin(),a.end())
+
+// friend function
+// friend function is not a member function of a class to which it is a friend
+// ff is decleared in the class with friend keyword
+// it must be defined outside the class to which it is friend
+// ff can access any member of the class to which it is friend
+// ff cannot access members of the class directly it can access with of objects
+
+// class Complex
+// {
+// private:
+//     int a, b;
+
+// public:
+//     void setData(int x, int y)
+//     {
+//         a = x;
+//         b = y;
+//     }
+//     void showData()
+//     {
+//         cout << a << b << endl;
+//     }
+//     // declear within a class
+
+//     friend void fun(Complex);
+// };
+
+// // define
+// void fun(Complex c)
+// {
+//     cout << "sum is" << c.a + c.b;
+// }
+// int main()
+// {
+//     Complex c1;
+//     c1.setData(4, 6);
+//     fun(c1);
+// }
+
+// friend function can become friend to more than one class
+// agar mai 2 classes ke member variables ko use krna chahta hu ek sath
+// tuo with the help of member function we can do this
+// class B;
+// class A
+// {
+//     int a;
+
+//     friend void fun(A, B);
+
+// public:
+//     void setData(int x)
+//     {
+//         a = x;
+//     }
+// };
+// class B
+// {
+//     int b;
+//     friend void fun(A, B);
+
+// public:
+//     void setData(int x)
+//     {
+//         b = x;
+//     }
+// };
+// void fun(A a1, B b1)
+// {
+//     cout << a1.a + b1.b << endl;
+// }
+// int main()
+// {
+//     A a1;
+//     a1.setData(4);
+//     B b1;
+//     b1.setData(5);
+//     fun(a1, b1);
+// }
