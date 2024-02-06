@@ -50,25 +50,49 @@ int search(string pat, string txt)
     }
     return ans;
 }
+// int main()
+//{
+
+// string ptr = "aaba", txt = "aabaabaa";
+// auto ans = search(ptr, txt);
+// cout << ans << "\n";
+
+// map<char, int> mp;
+// // set<char> s;
+// string ptr = "aaba";
+// for (int i = 0; i < ptr.length(); i++)
+// {
+//     mp[ptr[i]]++;
+// }
+// for (int i = 0; i < ptr.length(); i++)
+// {
+//     s.insert(ptr[i]);
+// }
+// cout << mp.size();
+// cout << s.size();
+// return 0;
+//}
+
+bool checkDuplicatesWithinK(int arr[], int n, int k)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n && j < i + k; j++)
+        {
+            if (arr[i] == arr[j])
+                return true;
+        }
+    }
+    return false;
+}
+
+// Driver method to test above method
 int main()
 {
-
-    string ptr = "aaba", txt = "aabaabaa";
-    auto ans = search(ptr, txt);
-    cout << ans << "\n";
-
-    // map<char, int> mp;
-    // // set<char> s;
-    // string ptr = "aaba";
-    // for (int i = 0; i < ptr.length(); i++)
-    // {
-    //     mp[ptr[i]]++;
-    // }
-    // for (int i = 0; i < ptr.length(); i++)
-    // {
-    //     s.insert(ptr[i]);
-    // }
-    // cout << mp.size();
-    // cout << s.size();
-    return 0;
+    int arr[] = {1, 2, 3, 4, 4};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    if (checkDuplicatesWithinK(arr, n, 3))
+        cout << "Yes";
+    else
+        cout << "No";
 }

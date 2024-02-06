@@ -1,4 +1,5 @@
 // constructor
+
 // it is a special function that is invoked automatically at the time of object creation
 // Name of the constructor have same name as class
 // it doesn't have any return type
@@ -58,7 +59,8 @@
 //         cout << name << " " << acc_number << " " << balance << endl;
 //     }
 //     // copy constructor
-//     customer(customer &b) // Using a reference allows the constructor to directly access and copy the values from the original object, rather than creating a new copy of the object
+//     customer(customer &b) // Using a reference allows the constructor to directly access and copy the values from the original object,
+// rather than creating a new copy of the object
 //     {
 //         name = b.name;
 //         acc_number = b.acc_number;
@@ -81,7 +83,7 @@
 // }
 
 // destructor
-// it is an instance member function thta is invoked automatically whenever an object is going to be destroyed
+// it is an instance member function that is invoked automatically whenever an object is going to be destroyed
 // it is a last fun that is going to be called before an object is destroyed
 // it is used to free memory dynamically
 // Destructors do not have a return type, and they don't take any parameters. They are declared with the class name preceded by a tilde (~).

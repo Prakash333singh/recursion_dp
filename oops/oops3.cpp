@@ -1,3 +1,61 @@
+// static members in cpp
+// 1.static local variables
+// 2.static member variables
+// 3.static members functions
+
+// staic local variable
+// they are by default initialized to zero
+// thier lifetime is throughout the program
+// void fun()
+// {
+//     static int x; //default value will 0 its liftime is throughout the program
+//     int y;//initialized with the garbage value its liftime is throughout the function
+// }
+
+// staic member variable or class member variable
+// declared inside the class body
+// they must defined outside the class
+// smv does not belong to any object but to the whole class
+// there will only one copy of static member variable for the whole class
+// any object can use the same copy of class variable
+
+// static member function
+//  they are qualified with the keyword static
+//  they are also called member function
+//  they can be invoked with or without is_object
+//  they can only access static members of the class
+
+#include <bits\stdc++.h>
+using namespace std;
+class Account
+{
+private:
+    int balance;      // instance member variable
+    static float roi; // static member variable/class variable
+public:
+    void setBalance(int b)
+    {
+        balance = b;
+    }
+    static void setrio(float r) // static member function/class function
+    {
+        roi = r;
+    }
+};
+float Account::roi = 3.5; // by default value is 0
+// memory is allocated after declearation of this static member variable
+// does not depend on no of objects
+
+int main()
+{
+    Account a1, a2;
+    a1.setrio(4.5);
+    // we can call satic member function without creating objects
+    Account::setrio(3.4);
+    // we can call static member function without creating any object simply we have to write static key word before
+    // function decleartion
+}
+
 // static data member and function
 // how to count the total number of objects
 // they are attribute of classes or class member
@@ -60,7 +118,7 @@ using namespace std;
 //         cout << total_customer << endl;
 //     }
 // };
-// /// hoe to initailze the static member
+// /// how to initailze the static member
 // int customer::total_customer = 0;
 // int customer::total_balance = 0;
 

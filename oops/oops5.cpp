@@ -60,7 +60,7 @@ using namespace std;
 //     Complex operator+(Complex &c)
 //     {
 //         Complex ans;
-//         ans.real = real + c.real;
+//         ans.real = real + c.real; spinnin
 //         ans.img = img + c.img;
 //         return ans;
 //     }
@@ -154,6 +154,7 @@ using namespace std;
 // }
 
 // virtual function working concept
+// virtual function is used to avoid function overridding
 
 class A
 {
@@ -170,7 +171,7 @@ public:
 // early binding mai we will the type of pointer to which it is pointing
 //*vptr  which is pointing to the vtable   vtable 1
 //                      will store the address of functions
-//                f2 f3 f4
+//                    f2 f3 f4
 class B : public A
 {
 public:
