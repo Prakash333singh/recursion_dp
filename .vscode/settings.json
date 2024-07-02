@@ -3,6 +3,8 @@
     "iostream": "cpp",
     "typeindex": "cpp",
     "typeinfo": "cpp",
-    "random": "cpp"
-  }
+    "random": "cpp",
+    "new": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "disabled"
 }
