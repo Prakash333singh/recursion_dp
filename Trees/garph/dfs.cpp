@@ -27,32 +27,33 @@ public:
     }
 };
 
-int main()
-{
-    int V, E;
-    cin >> V >> E;
+// int main()
+// {
+//     int V, E;
+//     cin >> V >> E;
 
-    vector<int> adj[V];
+//     vector<int> adj[V];
 
-    for (int i = 0; i < E; i++)
-    {
-        int u, v;
-        cin >> u >> v;
-        adj[u].push_back(v);
-        adj[v].push_back(u);
-    }
+//     for (int i = 0; i < E; i++)
+//     {
+//         int u, v;
+//         cin >> u >> v;
+//         adj[u].push_back(v);
+//         adj[v].push_back(u);
+//     }
 
-    Solution obj;
+//     Solution obj;
 
-    vector<int> ans = obj.dfsOfGraph(V, adj);
-    for (int i = 0; i < ans.size(); i++)
-    {
-        cout << ans[i] << " ";
-    }
-    cout << endl;
+//     vector<int> ans = obj.dfsOfGraph(V, adj);
+//     for (int i = 0; i < ans.size(); i++)
+//     {
+//         cout << ans[i] << " ";
+//     }
+//     cout << endl;
 
-    return 0;
-}
+//     return 0;
+// }
+
 // i/p
 // 5 4
 //  0 2
@@ -100,3 +101,45 @@ int main()
 //     cin >> vertex;
 //     dfs(vertex);
 // }
+
+
+vector<int>preorderTraversal(TreeNode* root){
+    stack<TreeNode*>st;
+
+    vector<int>result;
+
+    s.push(root);
+
+    while(!st.empty()){
+        TreeNode* current = st.top();
+        st.pop();
+
+        if(current!=NULL){
+            // push unvisited neighbours to stack | order matters here, if you reverse it
+            // it would still be a DFS but a symmetric one to preorder out of the 6 possible combinations.
+            s.push(current->right);
+            s.push(current->left);
+
+            result.push_back(current->val);
+        }
+    }
+    return result;
+}
+
+int main() {
+    // Example usage of preorderTraversal
+    TreeNode* root = new TreeNode(1);
+    root->left = new TreeNode(2);
+    root->right = new TreeNode(3);
+    root->left->left = new TreeNode(4);
+    root->left->right = new TreeNode(5);
+
+    vector<int> result = preorderTraversal(root);
+    
+    for (int val : result) {
+        cout << val << " ";
+    }
+    cout << endl;
+
+    return 0;
+}

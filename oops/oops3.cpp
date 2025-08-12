@@ -25,36 +25,36 @@
 //  they can be invoked with or without is_object
 //  they can only access static members of the class
 
-#include <bits\stdc++.h>
-using namespace std;
-class Account
-{
-private:
-    int balance;      // instance member variable
-    static float roi; // static member variable/class variable
-public:
-    void setBalance(int b)
-    {
-        balance = b;
-    }
-    static void setrio(float r) // static member function/class function
-    {
-        roi = r;
-    }
-};
-float Account::roi = 3.5; // by default value is 0
-// memory is allocated after declearation of this static member variable
-// does not depend on no of objects
+// #include <bits\stdc++.h>
+// using namespace std;
+// class Account
+// {
+// private:
+//     int balance;      // instance member variable
+//     static float roi; // static member variable/class variable
+// public:
+//     void setBalance(int b)
+//     {
+//         balance = b;
+//     }
+//     static void setrio(float r) // static member function/class function
+//     {
+//         roi = r;
+//     }
+// };
+// float Account::roi = 3.5; // by default value is 0
+// // memory is allocated after declearation of this static member variable
+// // does not depend on no of objects
 
-int main()
-{
-    Account a1, a2;
-    a1.setrio(4.5);
-    // we can call satic member function without creating objects
-    Account::setrio(3.4);
-    // we can call static member function without creating any object simply we have to write static key word before
-    // function decleartion
-}
+// int main()
+// {
+//     Account a1, a2;
+//     a1.setrio(4.5);
+//     // we can call satic member function without creating objects
+//     Account::setrio(3.4);
+//     // we can call static member function without creating any object simply we have to write static key word before
+//     // function decleartion
+// }
 
 // static data member and function
 // how to count the total number of objects
@@ -67,8 +67,8 @@ int main()
 
 // static member function for accessing static member variables
 // aur static usse he banana hai jo sbke liye common rahe
-#include <bits\stdc++.h>
-using namespace std;
+// #include <bits\stdc++.h>
+// using namespace std;
 // class customer
 // {
 //     string name;
@@ -138,49 +138,55 @@ using namespace std;
 // }
 
 // Encapsulation
-// wrapping up of data and information in a single unit ,while controlling access to them
-// it is also called data hiding
+// Encapsulation is the mechanism of binding the data together and hiding it from the outside world. Encapsulation is achieved when each object keeps its state private so that other objects don’t have direct access to its state. Instead, they can access this state only through a set of public functions.
+
+// wrapping up of data and information in a single unit ,while controlling access to them it is also called data hiding
 // which we keep our variables private and control them with the help of functions
 // it is used to fill a right imformation or galat data feed na hojaye
 
 // for eg: if any user fill age -5 which does make any sense
 // so we can control this age variable with the help of functions
-// #include <bits\stdc++.h>
-// using namespace std;
-// class customer
-// {
-//     string name;
-//     int balance;
-//     int age;
+#include <bits\stdc++.h>
+using namespace std;
+class customer
+{
+    string name;
+    int balance;
+    int age;
 
-// public:
-//     customer(string a, int b, int c)
-//     {
-//         name = a;
-//         balance = b;
-//         age = c;
-//     }
-//     void deposit(int amount)
-//     {
-//         if (amount > 0)
-//         {
-//             balance += amount;
-//         }
-//         else
-//         {
-//             cout << "invalid amount" << endl;
-//         }
-//     }
-// };
-// int main()
-// {
-//     customer a1("rohit", 1000, 20);
-//     a1.deposit(100);
-//     // a1.deposit(-100);
-// }
+public:
+    customer(string a, int b, int c)
+    {
+        this->name = a;
+        this->balance = b;
+        this->age = c;
+    }
+    void deposit(int amount)
+    {
+        if (amount > 0)
+        {
+            balance += amount;
+        }
+        else
+        {
+            cout << "invalid amount" << endl;
+        }
+    }
+    void display()
+    {
+        cout << name << " " << balance << " " << age << endl;
+    }
+};
+int main()
+{
+    customer a1("rohit", 1000, 20);
+    a1.deposit(100);
+    a1.display();
+    // a1.deposit(-100);
+}
 
 // abstraction
-// display only essential information & hiding the details
+// hiding the unnecessary details from for end user and display only essential information to user
 // for eg we all are using instgram so when we send message to anyone we do dont know whole mechanism behind this message transfer user only need to pass its message to its friend so hiding all logic behind msg traversal this property is called abstraction
 // sort function in cpp sort(a.begin(),a.end())
 

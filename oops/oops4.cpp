@@ -46,8 +46,7 @@ using namespace std;
 // single inheritance
 //   a class can inherit from only one baseclass or ek derived class used the properties from parent class
 
-// first parent class constructor is called then child class is called
-// but it is opposite in case of destructor
+// first parent class constructor is called then child class is called but it is opposite in case of destructor
 
 // class Human
 // {
