@@ -1,8 +1,5 @@
 {
-  "files.associations": {
-    "iostream": "cpp",
-    "typeindex": "cpp",
-    "typeinfo": "cpp",
-    "random": "cpp"
-  }
+    "files.associations": {
+        "iostream": "cpp"
+    }
 }

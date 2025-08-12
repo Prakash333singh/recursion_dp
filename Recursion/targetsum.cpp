@@ -22,7 +22,7 @@ void printtargetsum(vector<int> &arr, int idx, string set, int sos, int target)
 int main()
 {
     vector<int> arr = {1, 2, 3, 4, 5};
-    int target = 9;
+    int target = 6;
 
     // Start from index 0 with an empty subset and sum 0
     printtargetsum(arr, 0, "", 0, target);

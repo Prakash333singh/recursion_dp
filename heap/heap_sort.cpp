@@ -30,13 +30,22 @@ public:
         }
     }
 
-    void heapify(int arr[], int size, int index)
+    // Heapify is an essential operation used to maintain the heap property. It's a process of building a heap from an array.
+    // The time complexity of the heapify method is O(log n) because we're essentially traversing a tree of height log n.
+    // We can heapify a full array in just O(N), because we would use the heapify method to process the elements.
+    // It ensures that the parent node is always maintaining the heap property with respect to its children.
+    // The time complexity of heapify is O(n) because it only needs to look at each node in the heap once.
+    // The cost of looking at a node is constant because it only needs to compare the node to its two children.
+
+    void maxheapify(int arr[], int size, int index)
     {
         // oth base indexing
         int li = 2 * index + 1;
         int ri = 2 * index + 2;
-        // int li = 2 * index;
-        // int ri = 2 * index + 1;
+
+        // 1 base indexing
+        //  int li = 2 * index;
+        //  int ri = 2 * index + 1;
 
         int largest = index;
 
@@ -52,6 +61,24 @@ public:
             heapify(arr, size, largest);
         }
     }
+    void minheapify(int arr[], int size, int index)
+    {
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+
+        int smallest = index;
+
+        if (left < size && arr[left] < arr[smallest])
+            smallest = left;
+        if (right < size && arr[right] < arr[smallest])
+            smallest = right;
+
+        if (smallest != index)
+        {
+            swap(arr[index], arr[smallest])
+                minheapify(arr, size, index);
+        }
+    }
 
     void heapSort(int arr[], int n)
     {
@@ -62,7 +89,7 @@ public:
             swap(arr[size], arr[0]);
             size--;
 
-            heapify(arr, size, 0);
+            maxheapify(arr, size, 0);
         }
     }
 

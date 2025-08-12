@@ -143,7 +143,6 @@
 // wrapping up of data and information in a single unit ,while controlling access to them it is also called data hiding
 // which we keep our variables private and control them with the help of functions
 // it is used to fill a right imformation or galat data feed na hojaye
-
 // for eg: if any user fill age -5 which does make any sense
 // so we can control this age variable with the help of functions
 #include <bits\stdc++.h>
@@ -189,6 +188,7 @@ int main()
 // hiding the unnecessary details from for end user and display only essential information to user
 // for eg we all are using instgram so when we send message to anyone we do dont know whole mechanism behind this message transfer user only need to pass its message to its friend so hiding all logic behind msg traversal this property is called abstraction
 // sort function in cpp sort(a.begin(),a.end())
+// when we use atm with interact with user interface to withdraw cash or checking balance we don't see the comples processes ,calculations,or how data is being retrieved from the bank database the complexity is abstracted away;
 
 // friend function
 // friend function is not a member function of a class to which it is a friend

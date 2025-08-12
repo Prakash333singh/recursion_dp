@@ -2,14 +2,15 @@
 //  it is an approach or programming pattern where the programs are structure throught class and object rather than function and logic
 
 // why we needs oops
-// to acheive modular programming -> it is simply  a approach in which we divide a large complex program into smaller independent and reuseble components
+// to acheive modular programming -> it is simply a approach in which we divide a large complex program into smaller independent and reuseble components
 // benefits
 // 1.code resusability
 // 2.readability
-// 3.scalability- adding new feature often becomes easier as new modules can be added without distrubing existing ones
+// 3.scalability-adding new feature often becomes easier as new modules can be added without distrubing existing ones
 // 4.testing
 // 5.ease of maintence when there is any bug or change is required ,so the developer can focus on specific module without
-// distrubing the actual code base
+// distrubing the actual code base.
+
 
 // pillars of oops
 // there are 4 pillars of oops
@@ -18,8 +19,8 @@
 // class->it is userdefined data type or it is factory of producing objects or blueprint for creating objects
 // objects have state and behaviour or these are real entity or anything that exist in physical world
 
-// object c1    class->object
-// userdefinedDatatype->varible
+// object c1          class->object
+// userdefinedDatatype -> varible+
 
 // function inside class are called methods
 #include <bits\stdc++.h>
@@ -102,7 +103,7 @@ using namespace std;
 // concept of padding
 // why an empty class has size 1??
 
-//  compilers typically ensure that an empty class has a size of at least 1 byte, allowing each object to have a distinct address.
+// compilers typically ensure that an empty class has a size of at least 1 byte, allowing each object to have a distinct address.
 // class a
 // {
 // };
@@ -120,10 +121,8 @@ using namespace std;
 
 // aaxxbbbb  x-padding
 // padding is used by complier to optimize memory alignment and access speed
-// it involves adding extra bits to the memory layout of classes to ensure that each member is aligned
-// at a memory address that's multiple of its size.
-// this optimization is crucial for efficient memory usage and access speed
-// especially in performance-critical application.
+// it involves adding extra bits to the memory layout of classes to ensure that each member is aligned at a memory address that's multiple of its size.
+// this optimization is crucial for efficient memory usage and access speed especially in performance-critical application.
 
 // Compilers often align data members to improve memory access speed. For example, on many architectures, accessing a 4-byte int may be more efficient if it starts at an address that is a multiple of 4. This is known as data alignment.
 // To align the int b properly, the compiler may insert padding after the char a. The amount of padding added depends on the compiler and the architecture.
@@ -285,3 +284,12 @@ public:
 
 //     return 0;
 // }
+
+
+// Abstraction: Abstraction is the process of showing only essential/necessary features of an entity/object to the outside world and hide the other irrelevant information. For example to open your TV we only have a power button, It is not required to understand how infra-red waves are getting generated in TV remote control.
+
+// Encapsulation: Encapsulation means wrapping up data and member function (Method) together into a single unit i.e. class. Encapsulation automatically achieve the concept of data hiding providing security to data by making the variable as private and expose the property to access the private data which would be public.
+
+// Inheritance: The ability of creating a new class from an existing class. Inheritance is when an object acquires the property of another object. Inheritance allows a class (subclass) to acquire the properties and behavior of another class (super-class). It helps to reuse, customize and enhance the existing code. So it helps to write a code accurately and reduce the development time.
+
+// Polymorphism: Polymorphism is derived from 2 Greek words: poly and morphs. The word "poly" means many and "morphs" means forms. So polymorphism means "many forms". A subclass can define its own unique behavior and still share the same functionalities or behavior of its parent/base class. A subclass can have their own behavior and share some of its behavior from its parent class not the other way around. A parent class cannot have the behavior of its subclass.

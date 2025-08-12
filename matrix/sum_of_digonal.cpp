@@ -4,7 +4,8 @@ int main()
 {
     int rows = 3;
     int col = 4;
-    vector<vector<int>> matrix(rows, vector<int>(col, 0));
+
+    vector<vector<int>> matrix(rows, vector<int>(col));
 
     for (int i = 0; i < rows; i++)
     {
